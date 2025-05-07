@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#007bff"> 
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="style.css">
+    <title>Formatador/Desformatador de JSON</title>
+</head>
+<body>
+    <h1>Formatador/Desformatador de JSON</h1>
+
+    <div class="format-container">
+        <label for="formattedInput" style="display: none;">Cole seu JSON compactado aqui:</label>
+        <textarea id="formattedInput" placeholder="Cole seu JSON compactado aqui para formatar"></textarea>
+        <button onclick="formatarJson()">Formatar JSON</button>
+        <div class="formatted-output-wrapper">
+            <label for="formattedOutput" style="display: none;">JSON Formatado:</label>
+            <div id="formattedOutput"></div>
+            <button class="copy-button" onclick="copiarTexto('formattedOutput')">Copiar</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <label for="inputJson" style="display: none;">Cole seu JSON aqui:</label>
+        <textarea id="inputJson" placeholder="Cole seu JSON aqui para desformatar"></textarea>
+        <button onclick="desformatarJson()">Desformatar JSON</button>
+        <div class="output-wrapper">
+            <label for="output" style="display: none;">JSON Desformatado:</label>
+            <div id="output"></div>
+            <button class="copy-button" onclick="copiarTexto('output')">Copiar</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
